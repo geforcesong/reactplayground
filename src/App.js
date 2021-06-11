@@ -19,11 +19,17 @@ class App extends Component {
     })
   }
 
+  delteNinja = (id) => {
+    this.setState({
+      ninjas: this.state.ninjas.filter(c => c.id != id)
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Hello World!</h1>
-        <Ninjas ninjas={this.state.ninjas} />
+        <Ninjas delteNinja={this.delteNinja} ninjas={this.state.ninjas} />
         <NinjasFunCompomet ninjas={this.state.ninjas} />
 
         <AddNinja addNinja={this.addNinja} />
