@@ -14,6 +14,7 @@ class App extends Component {
 
   addNinja = (ninja) => {
     ninja.id = Math.random();
+    console.log(`randomid: ${ninja.id}`);
     this.setState({
       ninjas: [...this.state.ninjas, ninja]
     })
