@@ -1,4 +1,8 @@
-const About = () => {
+import Rainbow from "../hoc/Rainbow";
+
+const About = (props) => {
+    console.log('About props', props);
+
     return (
         <div>
             <h1>This is About page</h1>
@@ -6,4 +10,4 @@ const About = () => {
     );
 }
 
-export default About;
+export default Rainbow(About);
