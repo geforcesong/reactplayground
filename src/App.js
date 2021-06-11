@@ -42,7 +42,7 @@ class App extends Component {
         <h1>Hello World!</h1>
         <Ninjas delteNinja={this.delteNinja} ninjas={this.state.ninjas} />
         <NinjasFunCompomet ninjas={this.state.ninjas} />
-
+        
         <AddNinja addNinja={this.addNinja} />
       </div>
     );
