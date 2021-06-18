@@ -5,6 +5,7 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Post from './components/Post'
 import Posts from './components/Posts'
+import License from './components/License';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                 <Route path="/contact" component={Contact} />
                 <Route path="/post/:postId" component={Post} />
                 <Route path="/posts/" component={Posts} />
+                <Route path="/license/" component={License} />
             </Switch>
         </BrowserRouter>
     );
