@@ -7,8 +7,8 @@ import Post from './components/Post'
 import Posts from './components/Posts'
 import License from './components/License';
 import ThemedComponent from './components/ThemedComponent';
-import  CountryHome  from './components/contries';
-import CountryPage from './components/contries/countryPage'
+import  CountryHome  from './components/countries';
+import CountryPage from './components/countries/countryPage'
 
 const Home = () => {
     return (
