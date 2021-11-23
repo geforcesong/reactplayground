@@ -11,6 +11,12 @@ export const ACTIONS = {
   EVALUATE: "evaluate",
 };
 
+function getDefaultState(){
+  return {
+    currentOperand: '0'
+  }
+}
+
 function reducer(state, { type, payload }) {
   switch (type) {
     case ACTIONS.ADD_DIGIT:
@@ -29,7 +35,7 @@ function reducer(state, { type, payload }) {
         currentOperand: `${state.currentOperand || ""}${payload.digit}`,
       };
     case ACTIONS.CLEAR:
-      return {};
+      return getDefaultState();
 
     case ACTIONS.CHOOSE_OPERATION:
       if (!state.currentOperand && !state.previousOperand) {
@@ -46,14 +52,14 @@ function reducer(state, { type, payload }) {
           ...state,
           operation: payload.operation,
           previousOperand: state.currentOperand,
-          currentOperand: null,
+          currentOperand: '0',
         };
       }
       return {
         ...state,
         previousOperand: evaluate(state),
         operation: payload.operation,
-        currentOperand: null,
+        currentOperand: '0',
       };
 
     case ACTIONS.EVALUATE:
@@ -69,13 +75,13 @@ function reducer(state, { type, payload }) {
       return state;
 
     case ACTIONS.DELETE_DIGIT:
-      if (state.overwrite) {
-        return {};
+      if (state.overwrite || !state.currentOperand) {
+        return getDefaultState();
       }
       if (state.currentOperand.length === 1) {
         return {
           ...state,
-          currentOperand: null,
+          currentOperand: '0',
         };
       }
       return {
@@ -123,7 +129,7 @@ function NumberFormatter(num){
 const Calculator = () => {
   const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
     reducer,
-    {}
+    getDefaultState()
   );
 
   return (
