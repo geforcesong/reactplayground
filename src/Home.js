@@ -8,7 +8,8 @@ import Posts from './components/Posts'
 import License from './components/License';
 import ThemedComponent from './components/ThemedComponent';
 import  CountryHome  from './components/countries';
-import CountryPage from './components/countries/countryPage'
+import CountryPage from './components/countries/countryPage';
+import Calculator from './components/calculator/calculator';
 
 const Home = () => {
     return (
@@ -26,6 +27,7 @@ const Home = () => {
                 <Route path="/theme/" component={ThemedComponent} />
                 <Route path="/countries/" component={CountryHome} />
                 <Route path="/country/:countryCode" component={CountryPage} />
+                <Route path="/calculator" component={Calculator} />
             </Switch>
         </BrowserRouter>
     );
