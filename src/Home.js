@@ -10,6 +10,7 @@ import ThemedComponent from './components/ThemedComponent';
 import  CountryHome  from './components/countries';
 import CountryPage from './components/countries/countryPage';
 import Calculator from './components/calculator/calculator';
+import ContextHookTesting from './components/ContextHookTesting';
 
 const Home = () => {
     return (
@@ -28,6 +29,7 @@ const Home = () => {
                 <Route path="/countries/" component={CountryHome} />
                 <Route path="/country/:countryCode" component={CountryPage} />
                 <Route path="/calculator" component={Calculator} />
+                <Route path="/contexthook" component={ContextHookTesting} />
             </Switch>
         </BrowserRouter>
     );

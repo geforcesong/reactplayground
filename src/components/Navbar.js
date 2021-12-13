@@ -9,6 +9,7 @@ const Navbar = () => {
             <li><Link to="/license">License</Link></li>
             <li><Link to="/theme">Themed Component</Link></li>
             <li><Link to="/countries">Country Demo</Link></li>
+            <li><Link to="/contexthook">Context Hook Testing</Link></li>
         </ul>
     );
 }
