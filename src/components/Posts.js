@@ -1,60 +1,59 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { addPost } from '../actions/postActions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addArticle, deleteArticle } from "../redux/";
 
 class Posts extends Component {
+  handleDeleteClick = (e) => {
+    const id = e.target.getAttribute("postid");
+    this.props.deletePost(id);
+  };
 
-    handleClick = (e) => {
-        const id = e.target.getAttribute('postid');
-        console.log(e);
-        this.props.deletePost(id);
-    }
+  handleAddClick = (e) => {
+    const id = Math.random();
+    this.props.addPost({
+      id,
+      title: `new added ${id}`,
+    });
+  };
 
-    addPost = (e) => {
-        const id = Math.random();
-        this.props.addPost({
-            id,
-            title: 'new added'
-        })
-    }
-
-    render() {
-        console.log(this.props);
-        return (
-            <div>
-                This is POST list:
-                <ul>
-                    {
-                        this.props.posts.map(post => {
-                            return (<li key={post.id}>
-                                {post.title}
-                                <button postid={post.id} onClick={this.handleClick}>delete</button>
-                            </li>)
-                        })
-                    }
-                </ul>
-                <button onClick={this.addPost}>Add Post</button>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        This is POST list:
+        <ul>
+          {this.props.posts.map((post) => {
+            return (
+              <li key={post.id}>
+                {post.title}
+                <button postid={post.id} onClick={this.handleDeleteClick}>
+                  delete
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+        <button onClick={this.handleAddClick}>Add Post</button>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps);
-    return {
-        posts: state.posts
-    }
-}
+  console.log(ownProps);
+  return {
+    posts: state.article.articles,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        deletePost: (id) => {
-            dispatch({ type: 'DELETE_POST', id });
-        },
-        addPost: (post) => {
-            dispatch(addPost(post));
-        }
-    }
-}
+  return {
+    deletePost: (id) => {
+      dispatch(deleteArticle(id));
+    },
+    addPost: (post) => {
+      dispatch(addArticle(post));
+    },
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);
