@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./navbar.module.scss";
 
 const Navbar = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
     <div className={styles.navbar}>
       {menus.map((menu) => {
         if (!menu.subMenus || !menu.subMenus.length) {
-          return <Link to={menu.link}>{menu.text}</Link>;
+          return <NavLink to={menu.link}>{menu.text}</NavLink>;
         } else {
           return (
             <div className={styles.dropdown}>
