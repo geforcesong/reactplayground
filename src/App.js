@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Ninjas from './Ninjas';
 import NinjasFunCompomet from './NinjasFunCompomet';
 import AddNinja from './AddNinja';
+import "./index.scss"
 
 class App extends Component {
   state = {
