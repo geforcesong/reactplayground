@@ -11,6 +11,7 @@ const Navbar = () => {
             <li><Link to="/countries">Country Demo</Link></li>
             <li><Link to="/contexthook">Context Hook Testing</Link></li>
             <li><Link to="/parentchild">Parent Child</Link></li>
+            <li><Link to="/redux-test">Redux Test</Link></li>
         </ul>
     );
 }

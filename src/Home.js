@@ -12,6 +12,7 @@ import CountryPage from './components/countries/countryPage';
 import Calculator from './components/calculator/calculator';
 import ContextHookTesting from './components/ContextHookTesting';
 import ParentChildComponent from './components/ParentChildComponent';
+import ReduxContainer from './components/ReduxTests/ReduxContainer';
 
 const Home = () => {
     return (
@@ -32,6 +33,7 @@ const Home = () => {
                 <Route path="/calculator" component={Calculator} />
                 <Route path="/contexthook" component={ContextHookTesting} />
                 <Route path="/parentchild" component={ParentChildComponent} />
+                <Route path="/redux-test" component={ReduxContainer} />
             </Switch>
         </BrowserRouter>
     );
