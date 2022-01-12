@@ -3,7 +3,7 @@ import userActionTypes from "./userActionTypes";
 const initialState = {
   loading: false,
   users: [],
-  error: "",
+  error: ""
 };
 
 const userReducer = (state = initialState, action) => {
@@ -15,12 +15,14 @@ const userReducer = (state = initialState, action) => {
       };
     case userActionTypes.FETCH_USER_SUCCESS:
       return {
+        ...state,
         loading: false,
         users: action.payload,
         error: "",
       };
     case userActionTypes.FETCH_USER_FAILED:
       return {
+        ...state,
         loading: false,
         users: [],
         error: action.payload,
