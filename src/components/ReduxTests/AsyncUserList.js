@@ -5,7 +5,7 @@ import { fetchUsers } from "../../redux";
 function AsyncUserList({ fetchUsers, userData }) {
   useEffect(() => {
     fetchUsers();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div>
@@ -14,7 +14,11 @@ function AsyncUserList({ fetchUsers, userData }) {
         <h3>Loading users....</h3>
       ) : (
         userData.users?.map((user) => {
-          return <div key={user.id}><b>{user.id}</b> {user.name}</div>;
+          return (
+            <div key={user.id}>
+              <b>{user.id}</b> {user.name}
+            </div>
+          );
         })
       )}
     </div>
