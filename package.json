@@ -1,7 +1,7 @@
 {
   "name": "reactplayground",
   "version": "0.1.0",
-  "homepage": "./",
+  "homepage": "https://geforcesong.github.io/reactplayground/build/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",

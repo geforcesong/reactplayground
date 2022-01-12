@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.586ae56a.chunk.css",
-    "main.js": "./static/js/main.ae975b00.chunk.js",
-    "main.js.map": "./static/js/main.ae975b00.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.efb4541e.js",
-    "runtime-main.js.map": "./static/js/runtime-main.efb4541e.js.map",
-    "static/js/2.86216ba6.chunk.js": "./static/js/2.86216ba6.chunk.js",
-    "static/js/2.86216ba6.chunk.js.map": "./static/js/2.86216ba6.chunk.js.map",
-    "index.html": "./index.html",
-    "static/css/main.586ae56a.chunk.css.map": "./static/css/main.586ae56a.chunk.css.map",
-    "static/js/2.86216ba6.chunk.js.LICENSE.txt": "./static/js/2.86216ba6.chunk.js.LICENSE.txt"
+    "main.css": "/reactplayground/build/static/css/main.586ae56a.chunk.css",
+    "main.js": "/reactplayground/build/static/js/main.ae975b00.chunk.js",
+    "main.js.map": "/reactplayground/build/static/js/main.ae975b00.chunk.js.map",
+    "runtime-main.js": "/reactplayground/build/static/js/runtime-main.5246c758.js",
+    "runtime-main.js.map": "/reactplayground/build/static/js/runtime-main.5246c758.js.map",
+    "static/js/2.86216ba6.chunk.js": "/reactplayground/build/static/js/2.86216ba6.chunk.js",
+    "static/js/2.86216ba6.chunk.js.map": "/reactplayground/build/static/js/2.86216ba6.chunk.js.map",
+    "index.html": "/reactplayground/build/index.html",
+    "static/css/main.586ae56a.chunk.css.map": "/reactplayground/build/static/css/main.586ae56a.chunk.css.map",
+    "static/js/2.86216ba6.chunk.js.LICENSE.txt": "/reactplayground/build/static/js/2.86216ba6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.efb4541e.js",
+    "static/js/runtime-main.5246c758.js",
     "static/js/2.86216ba6.chunk.js",
     "static/css/main.586ae56a.chunk.css",
     "static/js/main.ae975b00.chunk.js"
