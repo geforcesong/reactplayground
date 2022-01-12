@@ -11,10 +11,10 @@ export const ACTIONS = {
   EVALUATE: "evaluate",
 };
 
-function getDefaultState(){
+function getDefaultState() {
   return {
-    currentOperand: '0'
-  }
+    currentOperand: "0",
+  };
 }
 
 function reducer(state, { type, payload }) {
@@ -28,7 +28,7 @@ function reducer(state, { type, payload }) {
         };
       }
       if (payload.digit === "0" && state.currentOperand === "0") return state;
-      if (payload.digit === "." &&  state.currentOperand?.includes("."))
+      if (payload.digit === "." && state.currentOperand?.includes("."))
         return state;
       return {
         ...state,
@@ -52,14 +52,14 @@ function reducer(state, { type, payload }) {
           ...state,
           operation: payload.operation,
           previousOperand: state.currentOperand,
-          currentOperand: '0',
+          currentOperand: "0",
         };
       }
       return {
         ...state,
         previousOperand: evaluate(state),
         operation: payload.operation,
-        currentOperand: '0',
+        currentOperand: "0",
       };
 
     case ACTIONS.EVALUATE:
@@ -81,13 +81,15 @@ function reducer(state, { type, payload }) {
       if (state.currentOperand.length === 1) {
         return {
           ...state,
-          currentOperand: '0',
+          currentOperand: "0",
         };
       }
       return {
         ...state,
         currentOperand: state.currentOperand.slice(0, -1),
       };
+    default:
+      return state;
   }
 }
 
@@ -109,21 +111,23 @@ function evaluate({ currentOperand, previousOperand, operation }) {
     case "/":
       computation = prev / current;
       break;
+    default:
+      ;
   }
   return computation.toString();
 }
 
-const INTEGER_FORMATTER = new Intl.NumberFormat("en-us",{
-    maximumFractionDigits:0
+const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
+  maximumFractionDigits: 0,
 });
 
-function NumberFormatter(num){
-    if(!num) return num;
-    const [integer, decimal] = num.split('.');
-    if(!decimal){
-        return INTEGER_FORMATTER.format(integer);
-    }
-    return `${INTEGER_FORMATTER.format(integer)}.${decimal}`;
+function NumberFormatter(num) {
+  if (!num) return num;
+  const [integer, decimal] = num.split(".");
+  if (!decimal) {
+    return INTEGER_FORMATTER.format(integer);
+  }
+  return `${INTEGER_FORMATTER.format(integer)}.${decimal}`;
 }
 
 const Calculator = () => {
@@ -146,7 +150,9 @@ const Calculator = () => {
       >
         AC
       </button>
-      <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>DEL</button>
+      <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>
+        DEL
+      </button>
 
       <OperationButton operation="/" dispatch={dispatch} />
       <DigitButton digit="1" dispatch={dispatch} />

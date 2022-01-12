@@ -23,7 +23,7 @@ class App extends Component {
 
   delteNinja = (id) => {
     this.setState({
-      ninjas: this.state.ninjas.filter(c => c.id != id)
+      ninjas: this.state.ninjas.filter(c => c.id !== id)
     })
   }
 

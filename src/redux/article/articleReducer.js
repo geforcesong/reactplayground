@@ -13,7 +13,7 @@ const articleReducer = (state = initState, action) => {
   if (action.type === articleActionTypes.DELETE_ARTICLE) {
     return {
       ...state,
-      articles: state.articles.filter((c) => c.id != action.id),
+      articles: state.articles.filter((c) => c.id !== action.id),
     };
   }
   if (action.type === articleActionTypes.ADD_ARTICLE) {

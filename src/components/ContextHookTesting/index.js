@@ -1,4 +1,4 @@
-import { useState, useReducer } from "react";
+import { useState } from "react";
 import { UserContext } from "./UserContext";
 import { ColorContext } from "./ColorContext";
 import ChildComponent1 from "./ChildComponent1";

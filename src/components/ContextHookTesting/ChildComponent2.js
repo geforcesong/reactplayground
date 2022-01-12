@@ -4,7 +4,7 @@ import { BusinessContext } from "./BusinessContext";
 
 
 const ChildComponent2 = () => {
-    const {value, setValue} = useContext(UserContext);
+    const {value} = useContext(UserContext);
     const {count, dispatch} = useContext(BusinessContext);
 
     return (

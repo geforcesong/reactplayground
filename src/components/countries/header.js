@@ -16,9 +16,9 @@ export default function CountryHeader({ updateTheme }) {
       <span>Where in the world?</span>
 
       <div className="theme-link">
-        <a onClick={handleClick}>
+        <button onClick={handleClick}>
           {themeText}
-        </a>
+        </button>
       </div>
     </div>
   );

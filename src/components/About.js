@@ -3,14 +3,14 @@ import UseStateTestHook from "./UseStateTestHook";
 import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 
-let styles = {
-    height: 100
-}
-let age =0;
+// let styles = {
+//     height: 100
+// }
+// let age =0;
 
 const About = (props) => {
   console.log("About props", props);
-  const { data, isPending, error } = useFetch(
+  const { data } = useFetch(
     "https://jsonplaceholder.typicode.com/users"
   );
 

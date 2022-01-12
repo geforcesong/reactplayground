@@ -45,7 +45,7 @@ export default function CountryPage() {
 
   useEffect(() => {
     loadData();
-  }, [code]);
+  }, [code]);// eslint-disable-line react-hooks/exhaustive-deps
 
   const handleClick = () => {
     history.goBack();

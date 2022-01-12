@@ -25,7 +25,7 @@ class Post extends Component {
             <div onClick={this.handleClick}>
                 Hello, post id is: {this.state.id}
                 <div>
-                    <h3 ref={this.myRef}></h3>
+                    <h3 ref={this.myRef}>Test H3</h3>
                     <Child
                         ref={this.childRef}
                         handleClick={this.handleClick} />
