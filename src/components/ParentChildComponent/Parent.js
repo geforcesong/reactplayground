@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Child from "./Child";
+import StandChild from "./StandChild";
 
 const Parent = (props) => {
   const [parentNum, setParentNum] = useState(100);
@@ -18,6 +19,7 @@ const Parent = (props) => {
       >Add Parent 10</button>
       <br />
       <Child parentNum={parentNum} setParentNum={setParentNum}></Child>
+      <StandChild />
     </div>
   );
 };
