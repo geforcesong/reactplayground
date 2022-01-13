@@ -38,6 +38,12 @@ const Navbar = () => {
           { text: "Articles", link: "/posts" },
         ],
       },
+      {
+        text: "Bootstraps",
+        subMenus: [
+          { text: "First Testing", link: "/bootstrap-test" },
+        ],
+      },
     ],
     []
   );

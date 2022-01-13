@@ -13,6 +13,7 @@ import Calculator from './components/calculator/calculator';
 import ContextHookTesting from './components/ContextHookTesting';
 import ParentChildComponent from './components/ParentChildComponent';
 import ReduxContainer from './components/ReduxTests/ReduxContainer';
+import BootstrapTest from './components/BootstrapComponents/BootstrapTest';
 
 const Home = () => {
     return (
@@ -34,6 +35,7 @@ const Home = () => {
                 <Route path="/contexthook" component={ContextHookTesting} />
                 <Route path="/parentchild" component={ParentChildComponent} />
                 <Route path="/redux-test" component={ReduxContainer} />
+                <Route path="/bootstrap-test" component={BootstrapTest} />
             </Switch>
         </BrowserRouter>
     );
