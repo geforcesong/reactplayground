@@ -42,6 +42,7 @@ const Navbar = () => {
         text: "Bootstraps",
         subMenus: [
           { text: "First Testing", link: "/bootstrap-test" },
+          { text: "Budget", link: "/budget" }
         ],
       },
     ],

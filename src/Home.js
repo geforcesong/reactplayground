@@ -14,6 +14,7 @@ import ContextHookTesting from './components/ContextHookTesting';
 import ParentChildComponent from './components/ParentChildComponent';
 import ReduxContainer from './components/ReduxTests/ReduxContainer';
 import BootstrapTest from './components/BootstrapComponents/BootstrapTest';
+import BudgetWrapper from './components/BootstrapComponents/BudgetWrapper';
 
 const Home = () => {
     return (
@@ -36,6 +37,7 @@ const Home = () => {
                 <Route path="/parentchild" component={ParentChildComponent} />
                 <Route path="/redux-test" component={ReduxContainer} />
                 <Route path="/bootstrap-test" component={BootstrapTest} />
+                <Route path="/budget" component={BudgetWrapper} />
             </Switch>
         </BrowserRouter>
     );
