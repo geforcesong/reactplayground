@@ -1,5 +1,5 @@
 import { Container, Stack, Button } from "react-bootstrap";
-import styles from "./Budget.module.scss";
+import styles, {testDiv} from "./Budget.module.scss";
 import BudgetCard from "./BudgetCard";
 import { UNCATEGORIZED_BUDGET_ID, useBudget } from "./contexts/BudgetContext";
 import AddBudgetModal from "./AddBudgetModal";
@@ -58,6 +58,7 @@ function Budget() {
           })}
           <UnCategorizedCard onAddExpenseClick={openAddExpenseModal} onViewExpenseClick = {() => setViewExpenseModalBudgetId(UNCATEGORIZED_BUDGET_ID)} />
         </div>
+        <div className={testDiv}>dfs</div>
       </Container>
       <AddBudgetModal
         show={showAddBudgetModal}
