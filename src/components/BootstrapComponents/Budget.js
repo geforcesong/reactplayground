@@ -8,6 +8,7 @@ import { useState } from "react";
 import UnCategorizedCard from "./UnCategorizedCard";
 import ViewExpenseModal from "./ViewExpenseModal";
 
+
 function Budget() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = useState(false);
