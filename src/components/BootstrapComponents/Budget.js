@@ -58,7 +58,9 @@ function Budget() {
           })}
           <UnCategorizedCard onAddExpenseClick={openAddExpenseModal} onViewExpenseClick = {() => setViewExpenseModalBudgetId(UNCATEGORIZED_BUDGET_ID)} />
         </div>
-        <div className={testDiv}>dfs</div>
+        <div className={testDiv}>
+          <h1>Hello</h1>
+        </div>
       </Container>
       <AddBudgetModal
         show={showAddBudgetModal}

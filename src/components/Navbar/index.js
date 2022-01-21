@@ -12,6 +12,7 @@ const Navbar = () => {
       {
         text: "About",
         subMenus: [
+          { text: "About", link: "/about" },
           { text: "Contact", link: "/contact" },
           { text: "License", link: "/license" },
         ],

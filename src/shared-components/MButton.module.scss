@@ -1,0 +1,49 @@
+.MButton {
+  position: relative;
+
+  .input {
+    position: relative;
+    display: block;
+  }
+
+  &.focus label {
+    font-size: 0.75rem;
+    transform: translateY(0);
+    transform-origin: left;
+    top: 0;
+    right: auto;
+  }
+
+  label {
+    left: 0.809rem;
+    right: auto;
+    top: 50%;
+    margin: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    border: none;
+    opacity: 0.8;
+    white-space: nowrap;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    color: white;
+  }
+  
+  input {
+    border: none;
+    font-size: inherit;
+    padding-left: 0.809rem;
+    padding-right: 0.809rem;
+    padding-top: 15px;
+    background-color: #333;
+    color: yellow;
+    outline-width: 0;
+  }
+}
+
+
+
+
+
+

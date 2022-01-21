@@ -2,6 +2,7 @@ import Rainbow from "../hoc/Rainbow";
 import UseStateTestHook from "./UseStateTestHook";
 import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
+import MButton from "../shared-components/MButton";
 
 // let styles = {
 //     height: 100
@@ -28,9 +29,12 @@ const About = (props) => {
 
   return (
     <div>
+
       <h1>This is About page</h1>
       <UseStateTestHook />
-
+      <MButton label="First Name" inputValue="start with" width={100} height={30} />
+      <br />
+      <MButton label="Last Name" width={200} height={60} />
       {data &&
         data.map((d) => {
           return <p key={d.id}>{d.name}</p>;
