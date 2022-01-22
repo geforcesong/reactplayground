@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import styles from "./MButton.module.scss";
 
-function MButton({ inputValue, label, width, height }) {
+function MButton({ value, label, field, width, height, onChange }) {
   const [focus, setFocus] = useState(false);
-  const [content, setContent] = useState(inputValue || "");
+  const [content, setContent] = useState(value || "");
 
   const handleFocus = () => {
     setFocus(() => true);
@@ -24,7 +24,17 @@ function MButton({ inputValue, label, width, height }) {
     if (content) {
       setFocus(() => true);
     }
-  }, []);
+    if (onChange) {
+      onChange({
+        field,
+        content
+      });
+    }
+  }, [content]);
+
+  useEffect(() => {
+    setContent(() => value);
+  }, [value]);
 
   const size = {
     width: `${width}px`,
