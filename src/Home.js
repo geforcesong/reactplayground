@@ -15,6 +15,7 @@ import ParentChildComponent from './components/ParentChildComponent';
 import ReduxContainer from './components/ReduxTests/ReduxContainer';
 import BootstrapTest from './components/BootstrapComponents/BootstrapTest';
 import BudgetWrapper from './components/BootstrapComponents/BudgetWrapper';
+import HigherOrderPage from './pages/HigherOrderPage';
 
 const Home = () => {
     return (
@@ -38,6 +39,7 @@ const Home = () => {
                 <Route path="/redux-test" component={ReduxContainer} />
                 <Route path="/bootstrap-test" component={BootstrapTest} />
                 <Route path="/budget" component={BudgetWrapper} />
+                <Route path="/higherorder" component={HigherOrderPage} />
             </Switch>
         </BrowserRouter>
     );

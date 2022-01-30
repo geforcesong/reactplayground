@@ -30,6 +30,7 @@ const Navbar = () => {
           { text: "Context Hook Testing", link: "/contexthook" },
           { text: "Parent Child", link: "/parentchild" },
           { text: "Themed Component", link: "/theme" },
+          { text: "Higher Order Component", link: "/higherorder" },
         ],
       },
       {
