@@ -6,12 +6,10 @@ export default function useLocalStorage(key, defaultValue) {
     if (jsonValue != null) {
       return JSON.parse(jsonValue);
     }
-
     if (typeof defaultValue === "function") {
       return defaultValue();
-    } else {
-      return defaultValue;
     }
+    return defaultValue;
   });
 
   useEffect(() => {

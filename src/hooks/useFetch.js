@@ -8,7 +8,7 @@ const useFetch = (url) => {
     useEffect(() => {
         const abortContr = new AbortController();
         setTimeout(() => {
-            fetch(url, { signal: abortContr.signal }).then((res) => {
+            fetch(url, { signal: abortContr.signal}).then((res) => {
                 return res.json();
             }).then(data => {
                 setData(data);
