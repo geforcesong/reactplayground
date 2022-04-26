@@ -16,7 +16,8 @@ import ReduxContainer from './components/ReduxTests/ReduxContainer';
 import BootstrapTest from './components/BootstrapComponents/BootstrapTest';
 import BudgetWrapper from './components/BootstrapComponents/BudgetWrapper';
 import HigherOrderPage from './pages/HigherOrderPage';
-
+import RandomTest from './pages/Tests/RandomTest';
+import AprilTest from './pages/Tests/AprilTest';
 const Home = () => {
     return (
         <BrowserRouter>
@@ -40,6 +41,8 @@ const Home = () => {
                 <Route path="/bootstrap-test" component={BootstrapTest} />
                 <Route path="/budget" component={BudgetWrapper} />
                 <Route path="/higherorder" component={HigherOrderPage} />
+                <Route path="/pages/random-page" component={RandomTest} />
+                <Route path="/pages/april-test-page" component={AprilTest} />
             </Switch>
         </BrowserRouter>
     );
