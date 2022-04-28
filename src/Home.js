@@ -19,6 +19,7 @@ import HigherOrderPage from "./pages/HigherOrderPage";
 import RandomTest from "./pages/Tests/RandomTest";
 import AprilTest from "./pages/Tests/AprilTest";
 import ControlTest from "./pages/Tests/ControlTest";
+import TodoList from "./pages/Interviews/TodoList";
 
 const Home = () => {
   return (
@@ -46,6 +47,7 @@ const Home = () => {
         <Route path="/pages/random-page" component={RandomTest} />
         <Route path="/pages/april-test-page" component={AprilTest} />
         <Route path="/pages/control-test-page" component={ControlTest} />
+        <Route path="/pages/interviews/todo-list" component={TodoList} />
       </Switch>
     </BrowserRouter>
   );

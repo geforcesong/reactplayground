@@ -55,6 +55,12 @@ const Navbar = () => {
           { text: "Control Test", link: "/pages/control-test-page" },
         ],
       },
+      {
+        text: "Interviews",
+        subMenus: [
+          { text: "Fireworks Todo List", link: "/pages/interviews/todo-list" },
+        ],
+      },
     ],
     []
   );

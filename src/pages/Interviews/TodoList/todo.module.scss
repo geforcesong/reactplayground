@@ -1,0 +1,25 @@
+.pageHolder {
+  padding: 30px;
+}
+
+.taskHolder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.buttons {
+  grid-column: 4 / 5;
+}
+
+.statusTodo {
+  grid-column: 1 / 2;
+}
+
+.statusDoing {
+  grid-column: 2 / 3;
+}
+
+.statusDone {
+  grid-column: 3 / 4;
+}
