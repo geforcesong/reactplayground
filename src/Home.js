@@ -20,6 +20,7 @@ import RandomTest from "./pages/Tests/RandomTest";
 import AprilTest from "./pages/Tests/AprilTest";
 import ControlTest from "./pages/Tests/ControlTest";
 import TodoList from "./pages/Interviews/TodoList";
+import FlippingClock from "./pages/Widgets/FlippingClock";
 
 const Home = () => {
   return (
@@ -48,6 +49,8 @@ const Home = () => {
         <Route path="/pages/april-test-page" component={AprilTest} />
         <Route path="/pages/control-test-page" component={ControlTest} />
         <Route path="/pages/interviews/todo-list" component={TodoList} />
+        <Route path="/pages/widget/flipping-clock" component={FlippingClock} />
+        
       </Switch>
     </BrowserRouter>
   );

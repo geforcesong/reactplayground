@@ -61,6 +61,12 @@ const Navbar = () => {
           { text: "Fireworks Todo List", link: "/pages/interviews/todo-list" },
         ],
       },
+      {
+        text: "Widgets",
+        subMenus: [
+          { text: "Flipping Clock", link: "/pages/widget/flipping-clock" },
+        ],
+      },
     ],
     []
   );
