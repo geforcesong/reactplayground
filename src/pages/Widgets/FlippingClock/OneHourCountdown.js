@@ -9,14 +9,18 @@ function OneHourCountdown(props) {
   const [tenMinute, setTenMinute] = useState(0);
 
   useEffect(() => {
+    setTotalSeconds(props.totalSeconds);
     const interval = setInterval(() => {
-      if (totalSeconds === 0) {
-        return clearInterval(interval);
-      }
-      setTotalSeconds((prev) => prev - 1);
+      setTotalSeconds((prev) => {
+        if (prev === 0) {
+          clearInterval(interval);
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [props.totalSeconds]);
 
   useEffect(() => {
     const tenMinute = Math.floor(totalSeconds / 600);

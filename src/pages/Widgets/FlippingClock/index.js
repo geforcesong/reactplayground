@@ -6,6 +6,8 @@ import "./flipping-clock.scss";
 function FlippingClock() {
   const [second, setSecond] = useState(9);
   const [tenSecond, setTenSecond] = useState(5);
+  const [countDownSecond, setCountDownSecond] = useState(3020);
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,6 +25,10 @@ function FlippingClock() {
     return () => clearInterval(interval);
   });
 
+  const handleClick = () => {
+    setCountDownSecond(parseInt(inputValue));
+  };
+
   return (
     <>
       <div className="holder" onClick={() => setSecond((prev) => prev + 1)}>
@@ -32,7 +38,16 @@ function FlippingClock() {
       <br />
       <br />
       <div className="holder">
-        <OneHourCountdown totalSeconds={3060} />
+        <OneHourCountdown totalSeconds={countDownSecond} />
+      </div>
+      <div className="holder">
+        <input
+          style={{ width: "200px" }}
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button onClick={handleClick}>Set</button>
       </div>
     </>
   );
