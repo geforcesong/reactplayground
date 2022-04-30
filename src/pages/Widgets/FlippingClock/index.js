@@ -13,7 +13,7 @@ function FlippingClock() {
     const interval = setInterval(() => {
       let nextSecond = second - 1;
       if (nextSecond < 0) {
-        if (tenSecond == 0) {
+        if (tenSecond === 0) {
           clearInterval(interval);
           return;
         }

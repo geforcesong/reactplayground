@@ -27,7 +27,7 @@ function TodoList() {
   const handleTaskChange = (task) => {
     if (!task.status) {
       task.status = 1;
-    } else if (task.status == 1) {
+    } else if (task.status === 1) {
       task.status = 2;
     } else {
       task.status = 0;

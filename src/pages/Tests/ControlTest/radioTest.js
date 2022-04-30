@@ -12,7 +12,7 @@ function RadioTest() {
           id="radCat"
           type="radio"
           value="cat"
-          checked={favoritePet == "cat"}
+          checked={favoritePet === "cat"}
           onChange={(e) => setFavoritePet(e.target.value)}
         />
         <span>Cat</span>
@@ -22,7 +22,7 @@ function RadioTest() {
           id="radDog"
           type="radio"
           value="dog"
-          checked={favoritePet == "dog"}
+          checked={favoritePet === "dog"}
           onChange={(e) => setFavoritePet(e.target.value)}
         />
         <span>Dog</span>

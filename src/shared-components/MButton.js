@@ -30,7 +30,7 @@ function MButton({ value, label, field, width, height, onChange }) {
         content
       });
     }
-  }, [content]);
+  }, [content, onChange, field]);
 
   useEffect(() => {
     setContent(() => value);
