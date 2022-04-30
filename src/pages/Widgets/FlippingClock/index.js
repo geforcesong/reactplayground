@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ClockCard from "./ClockCard";
+import OneHourCountdown from "./OneHourCountdown";
 import "./flipping-clock.scss";
 
 function FlippingClock() {
@@ -23,10 +24,17 @@ function FlippingClock() {
   });
 
   return (
-    <div className="holder" onClick={() => setSecond((prev) => prev + 1)}>
-      <ClockCard newNumber={tenSecond} />
-      <ClockCard newNumber={second} />
-    </div>
+    <>
+      <div className="holder" onClick={() => setSecond((prev) => prev + 1)}>
+        <ClockCard newNumber={tenSecond} />
+        <ClockCard newNumber={second} />
+      </div>
+      <br />
+      <br />
+      <div className="holder">
+        <OneHourCountdown totalSeconds={3060} />
+      </div>
+    </>
   );
 }
 
