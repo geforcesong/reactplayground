@@ -10,7 +10,7 @@ function DropDownTest() {
     { label: "R2-D2", value: "R2-D2" },
   ]);
 
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState('');
   return (
     <div style={{ margin: "10px" }}>
       <select value={value} onChange={(e) => setValue(e.currentTarget.value)}>
