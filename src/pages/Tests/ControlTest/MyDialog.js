@@ -16,10 +16,16 @@ const MyDialog = forwardRef((props, ref) => {
     );
   };
 
+  const showModal = () => {
+    dialogRef.current.showModal();
+  };
+  const show = () => {
+    dialogRef.current.show();
+  };
+
   useImperativeHandle(ref, () => ({
-    showModal() {
-      dialogRef.current.showModal();
-    },
+    show,
+    showModal,
     closeModal,
   }));
 

@@ -12,8 +12,11 @@ function ControlTest() {
     dialogRef.current.showModal();
   };
 
+  const handleShow = () => {
+    dialogRef.current.show();
+  };
+
   const handleClose = (v) => {
-    console.log("closed", v);
     dialogRef.current.closeModal();
   };
 
@@ -24,7 +27,8 @@ function ControlTest() {
       <CheckboxTest />
       <DropDownTest />
 
-      <button onClick={handleClick}>Open</button>
+      <button onClick={handleClick}>Open Modal</button>
+      <button onClick={handleShow}>Open</button>
 
       <MyDialog ref={dialogRef} onClose={handleClose}>
         <>
