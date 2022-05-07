@@ -53,6 +53,7 @@ const Navbar = () => {
           { text: "Random Test Case", link: "/pages/random-page" },
           { text: "April Test", link: "/pages/april-test-page" },
           { text: "Control Test", link: "/pages/control-test-page" },
+          { text: "Global Modal Usage", link: "/pages/global-modal-page" },
         ],
       },
       {

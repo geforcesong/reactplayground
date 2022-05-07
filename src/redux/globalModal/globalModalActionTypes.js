@@ -1,0 +1,8 @@
+const globalModalActionTypes = {
+  OPEN_GLOBAL_MODAL: "OPEN_GLOBAL_MODAL",
+  CLOSE_GLOBAL_MODAL: "CLOSE_GLOBAL_MODAL",
+  SET_GLOBAL_MODAL_REF: "SET_GLOBAL_MODAL_REF",
+  SET_MODAL_DATA: "SET_MODAL_DATA",
+};
+
+export default globalModalActionTypes;

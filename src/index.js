@@ -6,12 +6,16 @@ import { Provider } from "react-redux";
 // import rootReducer from './reducers/rootReducer';
 // const store = createStore(rootReducer);
 import store from "./redux/store";
+import GlobalModal from "./shared-components/GlobalModal/GlobalModal";
 
-import "./index.scss"
+import "./index.scss";
 
 ReactDOM.render(
   <Provider store={store}>
-    <Home />
+    <>
+      <Home />
+      <GlobalModal />
+    </>
   </Provider>,
   document.getElementById("root")
 );
