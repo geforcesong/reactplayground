@@ -9,7 +9,7 @@ function GlobalModalUsage() {
     dispatch(
       openGlobalModal({
         title: "Hello world",
-        component :License
+        component: License,
       })
     );
   };
@@ -19,7 +19,7 @@ function GlobalModalUsage() {
       openGlobalModal({
         title: "Hi There",
         description: "Give me a good reason please?",
-        component: null
+        lazyComponentPath: "TestLazyLoadComponent",
       })
     );
   };

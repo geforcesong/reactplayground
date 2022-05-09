@@ -3,7 +3,6 @@ import MyDialog from "../../pages/Tests/ControlTest/MyDialog";
 import { useDispatch, useSelector } from "react-redux";
 import { closeGlobalModal } from "../../redux";
 import styles from "./GlobalModal.module.scss";
-// import License from "../../components/License";
 
 function GlobalModal() {
   const dispatch = useDispatch();
@@ -11,6 +10,9 @@ function GlobalModal() {
   const title = useSelector((state) => state.globalModal.title);
   const description = useSelector((state) => state.globalModal.description);
   const CustomComponent = useSelector((state) => state.globalModal.component);
+  const lazyComponentPath = useSelector(
+    (state) => state.globalModal.lazyComponentPath
+  );
   const dialogRef = useRef();
 
   useEffect(() => {
@@ -27,6 +29,11 @@ function GlobalModal() {
     dialogRef.current.closeModal();
   };
 
+  let LazyComponent = null;
+  if (lazyComponentPath) {
+    LazyComponent = lazy(() => import("./globalModals/" + lazyComponentPath));
+  }
+
   return (
     <MyDialog ref={dialogRef} onClosed={handleClosed}>
       <div>
@@ -37,6 +44,11 @@ function GlobalModal() {
         <div className={styles["modal-body"]}>
           {CustomComponent ? <CustomComponent /> : description}
         </div>
+        {lazyComponentPath && (
+          <Suspense fallback={<>loading...</>}>
+            <LazyComponent />
+          </Suspense>
+        )}
       </div>
     </MyDialog>
   );

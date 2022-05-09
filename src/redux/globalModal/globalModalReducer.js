@@ -5,7 +5,8 @@ const initialState = {
   globalModalRef: null,
   title: "",
   description: "",
-  component: null
+  component: null,
+  lazyComponentPath: ''
 };
 
 const globalModalReducer = (state = initialState, action) => {
@@ -13,6 +14,8 @@ const globalModalReducer = (state = initialState, action) => {
     case globalModalActionTypes.OPEN_GLOBAL_MODAL:
       return {
         ...state,
+        lazyComponentPath: '',
+        component: null,
         isOpen: true,
         ...action.payload
       };
