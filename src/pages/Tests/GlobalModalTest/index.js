@@ -10,6 +10,7 @@ function GlobalModalUsage() {
       openGlobalModal({
         title: "Hello world",
         component: License,
+        lazyComponentPath: "test1/TestLazy1",
       })
     );
   };
