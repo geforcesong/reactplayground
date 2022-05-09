@@ -1,7 +1,7 @@
 import globalModalActionTypes from "./globalModalActionTypes";
 
 const initialState = {
-  isOpen: false,
+  isOpen: null,
   globalModalRef: null,
   title: "",
   description: "",
@@ -13,6 +13,7 @@ const globalModalReducer = (state = initialState, action) => {
       return {
         ...state,
         isOpen: true,
+        ...action.payload
       };
     case globalModalActionTypes.CLOSE_GLOBAL_MODAL:
       return {
@@ -20,18 +21,6 @@ const globalModalReducer = (state = initialState, action) => {
         isOpen: false,
       };
 
-    case globalModalActionTypes.SET_GLOBAL_MODAL_REF:
-      return {
-        ...state,
-        globalModalRef: action.payload,
-      };
-
-    case globalModalActionTypes.SET_MODAL_DATA:
-      return {
-        ...state,
-        title: action.payload.title,
-        description: action.payload.description,
-      };
 
     default:
       return state;

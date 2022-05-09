@@ -1,10 +1,11 @@
 import globalModalActionTypes from "./globalModalActionTypes";
 
-export const openGlobalModal = () => {
+export const openGlobalModal = (data) => {
   return {
     type: globalModalActionTypes.OPEN_GLOBAL_MODAL,
     payload: {
       isOpen: true,
+      ...data,
     },
   };
 };
@@ -12,21 +13,6 @@ export const openGlobalModal = () => {
 export const closeGlobalModal = () => {
   return {
     type: globalModalActionTypes.CLOSE_GLOBAL_MODAL,
-    payload: false
+    payload: false,
   };
 };
-
-export const setGlobalModalRef = (ref) => {
-  return {
-    type: globalModalActionTypes.SET_GLOBAL_MODAL_REF,
-    payload: ref
-  };
-};
-
-export const setGlobalModalData = (data) => {
-    return {
-      type: globalModalActionTypes.SET_MODAL_DATA,
-      payload: data
-    };
-  };
-  

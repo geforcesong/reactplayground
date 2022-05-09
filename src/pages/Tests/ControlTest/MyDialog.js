@@ -10,6 +10,7 @@ const MyDialog = forwardRef((props, ref) => {
       "animationend",
       () => {
         dialogRef.current.removeAttribute("closing");
+        props?.onClosed();
         dialogRef.current.close();
       },
       { once: true }
