@@ -1,0 +1,20 @@
+.modal-title {
+  width: 100%;
+  height: 30px;
+  background-color: aquamarine;
+  color: black;
+  font-weight: bold;
+  position: relative;
+
+  .cross {
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    cursor: pointer;
+  }
+}
+
+.modal-body {
+    background-color: bisque;
+    color: blueviolet;
+}

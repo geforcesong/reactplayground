@@ -5,6 +5,7 @@ const initialState = {
   globalModalRef: null,
   title: "",
   description: "",
+  component: null
 };
 
 const globalModalReducer = (state = initialState, action) => {

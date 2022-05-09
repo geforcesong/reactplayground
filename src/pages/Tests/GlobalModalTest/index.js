@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { openGlobalModal } from "../../../redux";
+import License from "../../../components/License";
 
 function GlobalModalUsage() {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ function GlobalModalUsage() {
     dispatch(
       openGlobalModal({
         title: "Hello world",
-        description: "This is a good example?",
+        component :License
       })
     );
   };
@@ -18,6 +19,7 @@ function GlobalModalUsage() {
       openGlobalModal({
         title: "Hi There",
         description: "Give me a good reason please?",
+        component: null
       })
     );
   };
