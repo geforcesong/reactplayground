@@ -1,0 +1,30 @@
+
+.stepper-container {
+  width: 300px;
+  min-height: 350px;
+  margin: 30px auto;
+  background-color: lightcyan;
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    margin: 10px;
+  }
+
+  .card {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 200%;
+    margin: 10px;
+    border-radius: 5px;
+    width: 280px;
+    opacity: 0;
+
+    &.active {
+      left: 0;
+      opacity: 1;
+      transition:  left 200ms ease-in-out, opacity 500ms ease-in-out,;
+    }
+  }
+}

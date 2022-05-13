@@ -22,6 +22,7 @@ import ControlTest from "./pages/Tests/ControlTest";
 import TodoList from "./pages/Interviews/TodoList";
 import FlippingClock from "./pages/Widgets/FlippingClock";
 import GlobalModalUsage from "./pages/Tests/GlobalModalTest";
+import Stepper from "./pages/Tests/Stepper";
 
 const Home = () => {
   return (
@@ -52,6 +53,7 @@ const Home = () => {
         <Route path="/pages/interviews/todo-list" component={TodoList} />
         <Route path="/pages/widget/flipping-clock" component={FlippingClock} />
         <Route path="/pages/global-modal-page" component={GlobalModalUsage} />
+        <Route path="/pages/stepper" component={Stepper} />
         
       </Switch>
     </BrowserRouter>
