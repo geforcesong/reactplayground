@@ -1,0 +1,2 @@
+(this.webpackJsonpreactplayground=this.webpackJsonpreactplayground||[]).push([[1],{56:function(t,e,n){"use strict";n.r(e);var r=n(0);e.default=function(){return Object(r.jsx)("div",{children:"Test lazy 1"})}}}]);
+//# sourceMappingURL=1.ff61d52b.chunk.js.map

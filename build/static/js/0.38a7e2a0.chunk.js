@@ -1,0 +1,2 @@
+(this.webpackJsonpreactplayground=this.webpackJsonpreactplayground||[]).push([[0],{55:function(t,n,e){"use strict";e.r(n);var a=e(0);n.default=function(){return Object(a.jsx)("div",{children:"Test Lazy load component 123"})}}}]);
+//# sourceMappingURL=0.38a7e2a0.chunk.js.map

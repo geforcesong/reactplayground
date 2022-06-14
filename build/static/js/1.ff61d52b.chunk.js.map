@@ -1,0 +1,1 @@
+{"version":3,"sources":["shared-components/GlobalModal/globalModals/test1/TestLazy1.js"],"names":["TestLazy1"],"mappings":"qIAIeA,UAJf,WACI,OAAQ","file":"static/js/1.ff61d52b.chunk.js","sourcesContent":["function TestLazy1() {\n    return (<div>Test lazy 1</div>  );\n}\n\nexport default TestLazy1;"],"sourceRoot":""}

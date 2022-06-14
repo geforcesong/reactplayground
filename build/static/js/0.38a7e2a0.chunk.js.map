@@ -1,0 +1,1 @@
+{"version":3,"sources":["shared-components/GlobalModal/globalModals/TestLazyLoadComponent.js"],"names":["TestLazyLoadComponent"],"mappings":"qIAIeA,UAJf,WACI,OAAS","file":"static/js/0.38a7e2a0.chunk.js","sourcesContent":["function TestLazyLoadComponent() {\n    return ( <div>Test Lazy load component 123</div> );\n}\n\nexport default TestLazyLoadComponent;"],"sourceRoot":""}
